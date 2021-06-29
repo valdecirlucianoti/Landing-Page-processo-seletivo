@@ -11,6 +11,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    min-width: 615px !important;
 }
 
 header {
@@ -98,7 +99,7 @@ nav {
 
     .sub-menu-2 {
         left: 100%;
-        top: 141px;
+        top: 162px;
         width: max-content;
     }
 
@@ -109,6 +110,7 @@ nav {
 
 #strip-down {
     width: 894px;
+    min-width: 615px !important;
     height: 290px;
 
     .mySlides {
@@ -230,6 +232,7 @@ section {
     align-items: center;
 
     main {
+        min-width: 615px !important;
         display: flex;
         justify-content: space-between;
         width: 894px;
@@ -272,7 +275,9 @@ section {
     }
 
     article#destaques {
+        min-width: 615px !important;
         width: 894px;
+        margin-top: 50px;
 
         #container-figures {
             display: flex;
@@ -322,8 +327,9 @@ section {
     }   
 }
  
-
-footer{
+  
+footer{ 
+    min-width: 615px !important;
     margin-top: 50px;
     background-color: seagreen;
     height: 100px;
@@ -334,6 +340,7 @@ footer{
     align-items: center;
 
     nav {
+        
         align-self: unset;
     }
 
@@ -344,7 +351,8 @@ footer{
 
 }
 
-@media screen and (width: 912px) {
+@media screen and (max-width: 912px){
+
 
     #strip-down {
         width: 100%;
