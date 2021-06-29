@@ -7,7 +7,6 @@
 body {
     height: 100%;
     width: 100%;
-
 }
 
 header {
@@ -27,8 +26,12 @@ img {
 }
 
 #strip-top {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     height: 20px;
     width: 100%;
+    color: #fff;
     background-color: seagreen;
 }
 
@@ -36,7 +39,9 @@ img {
     margin: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
-    width: 894px;
+    max-width: 894px;
+    width: 100%;
+    min-width: 650px;
     height: 96px;
 
     .logo-container {
@@ -93,11 +98,11 @@ nav {
 }
 
 #strip-down {
-    width: 894px !important;
-    height: 290px !important;
+    width: 894px;
+    height: 290px;
 
     .mySlides {
-        display: none
+        display: none;
     }
 
     img {
@@ -221,6 +226,10 @@ section {
         article {
             width: 565px;
             height: 100%;
+
+            h2 {
+                text-transform: uppercase;
+            }
         }
 
         aside {
@@ -244,9 +253,19 @@ section {
             figure {
                 width: 196px;
                 height: 163px;
+                position: relative;
 
                 img {
                     border-radius: 5px;
+                }
+
+                &:hover {
+                    opacity: 0.5;
+                }
+
+                figcaption {
+                    position: absolute;
+                    display: none;
                 }
             }
         }
@@ -272,4 +291,54 @@ footer {
         color: #fff;
     }
 
+}
+
+@media screen and (max-width: 912px) {
+
+    #strip-down {
+        width: 100%;
+        height: 290px;
+    }
+
+    section {
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: max-content;
+    
+            article {
+                width: 100%;
+                height: 100%;
+    
+                h2 {
+                    text-transform: uppercase;
+                }
+            }
+    
+            aside {
+                width: 100%;
+                height: 325px;
+    
+                img {
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        article#destaques {
+            width: 100%;
+            #container-figures {
+                flex-direction: column;
+
+                figure {
+                    width: 100% !important;
+                    height: 250px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
 }
